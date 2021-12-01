@@ -1,0 +1,13 @@
+{
+  "testEnvironment": "node",
+  "verbose": true,
+  "bail": true,
+  "testRegex": ".test.js$",
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!**/coverage/**",
+    "!**/node_modules/**",
+    "!**/test/**"
+  ]
+}
