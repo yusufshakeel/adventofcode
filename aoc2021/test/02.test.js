@@ -1,7 +1,7 @@
 'use strict';
 
-const sample = require('../data/0202-sample');
-const input = require('../data/0202-input');
+const sample = require('../data/02-sample');
+const input = require('../data/02-input');
 const { part1, part2 } = require('../src/02');
 
 test('02-01', () => {

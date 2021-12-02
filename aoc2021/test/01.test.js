@@ -1,7 +1,7 @@
 'use strict';
 
-const sample = require('../data/0101-sample');
-const input = require('../data/0101-input');
+const sample = require('../data/01-sample');
+const input = require('../data/01-input');
 const { sum, trioSum } = require('../src/01');
 
 test('01-01', () => {
