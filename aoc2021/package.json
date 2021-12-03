@@ -7,8 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "lint": "npx eslint -c .eslintrc.json src",
-    "lint:fix": "npx eslint --fix -c .eslintrc.json src",
+    "clear:index": "cp src/template.js src/index.js",
+    "precommit": "npm run lint:fix && npm run test",
+    "lint": "npx eslint -c .eslintrc.json src test",
+    "lint:fix": "npx eslint --fix -c .eslintrc.json src test",
     "test": "jest -c jest.config.json"
   },
   "author": "Yusuf Shakeel",

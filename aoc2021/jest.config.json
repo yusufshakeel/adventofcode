@@ -8,6 +8,8 @@
     "**/*.{js,jsx}",
     "!**/coverage/**",
     "!**/node_modules/**",
-    "!**/test/**"
+    "!**/test/**",
+    "!**/src/index.js",
+    "!**/src/template.js"
   ]
 }
