@@ -24,4 +24,12 @@ function trioSum(data) {
   return newData;
 }
 
-module.exports = { sum, trioSum };
+function part1(input) {
+  return sum(input);
+}
+
+function part2(input) {
+  return sum(trioSum(input));
+}
+
+module.exports = { part1, part2 };
