@@ -102,3 +102,5 @@ npm run create-boilerplate-file mycode 01
 ```
 
 This will create file inside `wip/mycode.js`.
+
+The above boilerplate file will be using input files `data/01-input.js` and `data/01-sample.js`.
