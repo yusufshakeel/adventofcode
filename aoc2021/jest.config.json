@@ -9,7 +9,7 @@
     "!**/coverage/**",
     "!**/node_modules/**",
     "!**/test/**",
-    "!**/script/create-files.js",
+    "!**/script/**/*",
     "!**/src/index.js",
     "!**/src/template.js"
   ]

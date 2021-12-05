@@ -7,8 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "clear:index": "cp src/template.js src/index.js",
-    "create:files": "node script/create-files.js",
+    "create-boilerplate-files": "",
+    "clear-index": "cp src/template.js src/index.js",
+    "create-files": "node script/create-files.js",
     "precommit": "npm run lint:fix && npm run test",
     "lint": "npx eslint -c .eslintrc.json src test",
     "lint:fix": "npx eslint --fix -c .eslintrc.json src test",

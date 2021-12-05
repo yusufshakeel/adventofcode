@@ -1,0 +1,15 @@
+'use strict';
+
+const sample = require('../data/${day}-sample');
+const input = require('../data/${day}-input');
+const { part1, part2 } = require('../src/${day}');
+
+test('${day}-01', () => {
+  expect(part1(sample)).toBe();
+  expect(part1(input)).toBe();
+});
+
+test('${day}-02', () => {
+  expect(part2(sample)).toBe();
+  expect(part2(input)).toBe();
+});

@@ -50,7 +50,7 @@ The `src/index.js` is a copy of the template file.
 Copy the template file into index file before starting to solve the problem.
 
 ```shell
-npm run clear:index
+npm run clear-index
 ```
 
 Create solution inside index file.
@@ -83,7 +83,7 @@ data/10-sample.js
 To create a blank files for the day run the following command.
 
 ```shell
-npm run create:files dayNumber
+npm run create-files dayNumber
 ```
 
 Example:
@@ -91,7 +91,7 @@ Example:
 Run the following to create files for day 1.
 
 ```shell
-npm run create:files 01
+npm run create-files 01
 ```
 
 This will create the following files with some boilerplate code.
