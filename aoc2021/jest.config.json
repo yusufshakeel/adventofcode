@@ -10,8 +10,6 @@
     "!**/node_modules/**",
     "!**/test/**",
     "!**/wip/**",
-    "!**/script/**/*",
-    "!**/src/index.js",
-    "!**/src/template.js"
+    "!**/script/**/*"
   ]
 }
