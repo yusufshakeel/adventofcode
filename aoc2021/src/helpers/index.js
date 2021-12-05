@@ -1,5 +1,9 @@
 'use strict';
 
+const LOGGING = (enabled = true) => {
+  return enabled ? (...args) => console.log(...args) : () => {};
+};
+
 function init1DArray(size, seed = 0) {
   const array = [];
   for (let i = 0; i < size; i++) {
@@ -20,4 +24,4 @@ function init2DArray(totalRows, totalColumns, seed = 0) {
   return array;
 }
 
-module.exports = { init1DArray, init2DArray };
+module.exports = { init1DArray, init2DArray, LOGGING };

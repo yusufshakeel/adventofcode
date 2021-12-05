@@ -1,26 +1,25 @@
 'use strict';
 
-const day = 'PUT-DAY-NUMBER-HERE';
-
 const sample = require(`../data/${day}-sample`);
 const input = require(`../data/${day}-input`);
+const { LOGGING } = require('../src/helpers');
 
-const CL = (...args) => console.log(...args);
+const LOG = LOGGING();
 
 function part1(input, expected) {
-  CL('ENTERED part1');
+  LOG('ENTERED part1');
   let result = 0;
 
-  CL({ pass: expected === result, expected, result });
-  CL('EXITING part1');
+  LOG({ pass: expected === result, expected, result });
+  LOG('EXITING part1');
 }
 
 function part2(input, expected) {
-  CL('ENTERED part2');
+  LOG('ENTERED part2');
   let result = 0;
 
-  CL({ pass: expected === result, expected, result });
-  CL('EXITING part2');
+  LOG({ pass: expected === result, expected, result });
+  LOG('EXITING part2');
 }
 
 const part1SampleExpected = 0;

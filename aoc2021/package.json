@@ -7,8 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "create-boilerplate-files": "",
-    "clear-index": "cp src/template.js src/index.js",
+    "create-boilerplate-file": "mkdir -p wip && node script/create-boilerplate-file.js",
     "create-files": "node script/create-files.js",
     "precommit": "npm run lint:fix && npm run test",
     "lint": "npx eslint -c .eslintrc.json src test",

@@ -37,23 +37,7 @@ Solutions are saved inside `src` directory.
 
 Tests are saved inside `test` directory.
 
-#### Template file
-
-Template file is inside `src` directory.
-
-File: `src/template.js`
-
-#### Index file
-
-The `src/index.js` is a copy of the template file.
-
-Copy the template file into index file before starting to solve the problem.
-
-```shell
-npm run clear-index
-```
-
-Create solution inside index file.
+Scripts are saved inside `script` directory.
 
 #### Input files
 
@@ -78,7 +62,7 @@ data/10-input.js
 data/10-sample.js
 ```
 
-#### Creating blank files for the day
+### Creating blank files for the day
 
 To create a blank files for the day run the following command.
 
@@ -102,3 +86,19 @@ data/01-sample.js
 src/01.js
 test/01.test.js
 ```
+
+### Creating boilerplate file
+
+To create boilerplate file run the following command.
+
+```shell
+npm run create-boilerplate-file filename dayNumber
+```
+
+Example:
+
+```shell
+npm run create-boilerplate-file mycode 01
+```
+
+This will create file inside `wip/mycode.js`.
