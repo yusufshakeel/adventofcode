@@ -1,8 +1,8 @@
 'use strict';
 
-const LOGGING = (enabled = true) => {
+function LOGGING(enabled = true) {
   return enabled ? (...args) => console.log(...args) : () => {};
-};
+}
 
 function init1DArray(size, seed = 0) {
   const array = [];
@@ -24,4 +24,8 @@ function init2DArray(totalRows, totalColumns, seed = 0) {
   return array;
 }
 
-module.exports = { init1DArray, init2DArray, LOGGING };
+function sumNumbers(arrayOfNumbers) {
+  return arrayOfNumbers.reduce((sum, value) => sum + value, 0);
+}
+
+module.exports = { init1DArray, init2DArray, LOGGING, sumNumbers };

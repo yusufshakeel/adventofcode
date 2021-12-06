@@ -1,6 +1,6 @@
 'use strict';
 
-const { init1DArray, init2DArray, LOGGING } = require('../../src/helpers');
+const { init1DArray, init2DArray, LOGGING, sumNumbers } = require('../../src/helpers');
 
 describe('LOGGING', () => {
   describe('When logging is enabled', () => {
@@ -53,5 +53,13 @@ describe('init2DArray', () => {
         ['-', '-', '-']
       ]);
     });
+  });
+});
+
+describe('sumNumbers', () => {
+  test('Should return sum', () => {
+    expect(sumNumbers([1, 2, 3])).toBe(6);
+    expect(sumNumbers([1, 2, -3])).toBe(0);
+    expect(sumNumbers([-1, 2, -3])).toBe(-2);
   });
 });

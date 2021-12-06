@@ -10,7 +10,7 @@ function part1(input, expected) {
   LOG('ENTERED part1');
   let result = 0;
 
-  LOG({ pass: expected === result, expected, result });
+  console.log({ pass: expected === result, expected, result });
   LOG('EXITING part1');
 }
 
@@ -18,7 +18,7 @@ function part2(input, expected) {
   LOG('ENTERED part2');
   let result = 0;
 
-  LOG({ pass: expected === result, expected, result });
+  console.log({ pass: expected === result, expected, result });
   LOG('EXITING part2');
 }
 
