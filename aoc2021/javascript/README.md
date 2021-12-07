@@ -1,8 +1,6 @@
 # AoC2021
 
-This directory contains solutions for Advent Of Code 2021.
-
-Code is written is JavaScript.
+This directory contains solutions for Advent Of Code 2021. Code is written is JavaScript.
 
 ## Getting started
 
