@@ -16,4 +16,12 @@ function sumNumbers(arrayOfNumbers) {
   return arrayOfNumbers.reduce((sum, value) => sum + value, 0);
 }
 
-module.exports = { init1DArray, init2DArray, LOGGING, sumNumbers };
+function charCode(ch) {
+  return `${ch}`.charCodeAt(0);
+}
+
+function fromCharCode(charCode) {
+  return String.fromCharCode(charCode);
+}
+
+module.exports = { init1DArray, init2DArray, LOGGING, sumNumbers, charCode, fromCharCode };

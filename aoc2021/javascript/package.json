@@ -23,5 +23,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.4.2",
     "prettier": "^2.5.0"
+  },
+  "dependencies": {
+    "es-iter": "^1.1.2"
   }
 }

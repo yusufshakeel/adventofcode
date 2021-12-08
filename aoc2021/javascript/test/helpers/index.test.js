@@ -1,6 +1,13 @@
 'use strict';
 
-const { init1DArray, init2DArray, LOGGING, sumNumbers } = require('../../src/helpers');
+const {
+  init1DArray,
+  init2DArray,
+  LOGGING,
+  sumNumbers,
+  charCode,
+  fromCharCode
+} = require('../../src/helpers');
 
 describe('LOGGING', () => {
   describe('When logging is enabled', () => {
@@ -61,5 +68,17 @@ describe('sumNumbers', () => {
     expect(sumNumbers([1, 2, 3])).toBe(6);
     expect(sumNumbers([1, 2, -3])).toBe(0);
     expect(sumNumbers([-1, 2, -3])).toBe(-2);
+  });
+});
+
+describe('charCode', () => {
+  test('Should return character code', () => {
+    expect(charCode('a')).toBe(97);
+  });
+});
+
+describe('fromCharCode', () => {
+  test('Should return character from charCode', () => {
+    expect(fromCharCode(97)).toBe('a');
   });
 });
