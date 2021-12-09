@@ -6,7 +6,9 @@ const {
   LOGGING,
   sumNumbers,
   charCode,
-  fromCharCode
+  fromCharCode,
+  sortingNumbers,
+  sortingStrings
 } = require('../../src/helpers');
 
 describe('LOGGING', () => {
@@ -80,5 +82,65 @@ describe('charCode', () => {
 describe('fromCharCode', () => {
   test('Should return character from charCode', () => {
     expect(fromCharCode(97)).toBe('a');
+  });
+});
+
+describe('sortingNumbers', () => {
+  describe('Default sorting in ascending order', () => {
+    test('Should return sorted result', () => {
+      expect(sortingNumbers([1, 3, 2, 5, 4, 6])).toStrictEqual([1, 2, 3, 4, 5, 6]);
+    });
+  });
+
+  describe('When sorting in descending order', () => {
+    test('Should return sorted result', () => {
+      expect(sortingNumbers([1, 3, 2, 5, 4, 6], true)).toStrictEqual([6, 5, 4, 3, 2, 1]);
+    });
+  });
+});
+
+describe('sortingStrings', () => {
+  describe('Default sorting in ascending order', () => {
+    describe('When sorting characters', () => {
+      test('Should return sorted result', () => {
+        expect(sortingStrings(['a', 'c', 'b', 'd', 'a'])).toStrictEqual(['a', 'a', 'b', 'c', 'd']);
+      });
+    });
+
+    describe('When sorting strings', () => {
+      test('Should return sorted result', () => {
+        expect(sortingStrings(['acb', 'aba', 'abb', 'aab'])).toStrictEqual([
+          'aab',
+          'aba',
+          'abb',
+          'acb'
+        ]);
+      });
+    });
+  });
+
+  describe('When sorting in descending order', () => {
+    describe('When sorting characters', () => {
+      test('Should return sorted result', () => {
+        expect(sortingStrings(['a', 'c', 'b', 'd', 'a'], true)).toStrictEqual([
+          'd',
+          'c',
+          'b',
+          'a',
+          'a'
+        ]);
+      });
+    });
+
+    describe('When sorting strings', () => {
+      test('Should return sorted result', () => {
+        expect(sortingStrings(['acb', 'aba', 'abb', 'aab'], true)).toStrictEqual([
+          'acb',
+          'abb',
+          'aba',
+          'aab'
+        ]);
+      });
+    });
   });
 });
