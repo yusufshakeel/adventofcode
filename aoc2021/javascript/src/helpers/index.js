@@ -24,4 +24,23 @@ function fromCharCode(charCode) {
   return String.fromCharCode(charCode);
 }
 
-module.exports = { init1DArray, init2DArray, LOGGING, sumNumbers, charCode, fromCharCode };
+function sortingNumbers(arr, desc = false) {
+  const order = desc ? (a, b) => b - a : (a, b) => a - b;
+  return arr.sort(order);
+}
+
+function sortingStrings(arr, desc = false) {
+  const order = desc ? (a, b) => b.localeCompare(a) : (a, b) => a.localeCompare(b);
+  return arr.sort(order);
+}
+
+module.exports = {
+  init1DArray,
+  init2DArray,
+  LOGGING,
+  sumNumbers,
+  charCode,
+  fromCharCode,
+  sortingNumbers,
+  sortingStrings
+};
