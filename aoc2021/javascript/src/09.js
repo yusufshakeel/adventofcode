@@ -167,15 +167,21 @@ function part2_approach2(input) {
           visited.add(`${ir},${ic}`);
           basinSize++;
 
-          const rowRange = [-1, 0, 1, 0];
-          const colRange = [0, 1, 0, -1];
-          for (let i = 0; i < 4; i++) {
-            const sr = ir + rowRange[i];
-            const sc = ic + colRange[i];
+          // this will take only top, left, right, bottom locations from the current location.
+          const points = [
+            [-1, 0],
+            [0, 1],
+            [1, 0],
+            [0, -1]
+          ];
+          points.forEach(delta => {
+            const [dr, dc] = delta;
+            const sr = ir + dr;
+            const sc = ic + dc;
             if (sr >= 0 && sr < tr && sc >= 0 && sc < tc && map[sr][sc] !== 9) {
               queue.enqueue([sr, sc]);
             }
-          }
+          });
         }
         basinSizes.push(basinSize);
       }
