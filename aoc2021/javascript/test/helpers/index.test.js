@@ -8,7 +8,8 @@ const {
   charCode,
   fromCharCode,
   sortingNumbers,
-  sortingStrings
+  sortingStrings,
+  range
 } = require('../../src/helpers');
 
 describe('LOGGING', () => {
@@ -141,6 +142,26 @@ describe('sortingStrings', () => {
           'aab'
         ]);
       });
+    });
+  });
+});
+
+describe('range', () => {
+  describe('When end is mentioned', () => {
+    test('Should return array from 0 to end - 1', () => {
+      expect(range(5)).toStrictEqual([0, 1, 2, 3, 4]);
+    });
+  });
+
+  describe('When start and end are mentioned', () => {
+    test('Should return array from start to end - 1', () => {
+      expect(range(1, 5)).toStrictEqual([1, 2, 3, 4]);
+    });
+  });
+
+  describe('When start, end and step are mentioned', () => {
+    test('Should return array from start to end - 1', () => {
+      expect(range(1, 5, 2)).toStrictEqual([1, 3]);
     });
   });
 });
