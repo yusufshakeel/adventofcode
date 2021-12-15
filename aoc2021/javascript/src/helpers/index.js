@@ -34,6 +34,24 @@ function sortingStrings(arr, desc = false) {
   return arr.sort(order);
 }
 
+function range(...args) {
+  let start = 0;
+  let end = 0;
+  let step = 1;
+  let array = [];
+  if (args.length === 1) {
+    [end] = args;
+  } else if (args.length === 2) {
+    [start, end] = args;
+  } else if (args.length === 3) {
+    [start, end, step] = args;
+  }
+  for (let i = start; i < end; i = i + step) {
+    array.push(i);
+  }
+  return array;
+}
+
 module.exports = {
   init1DArray,
   init2DArray,
@@ -42,5 +60,6 @@ module.exports = {
   charCode,
   fromCharCode,
   sortingNumbers,
-  sortingStrings
+  sortingStrings,
+  range
 };
